@@ -468,7 +468,7 @@ overflow: hidden;
 
 code {
     font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
-    background: #efefef;
+    /*background: #efefef;*/
     /*border: 1px solid #ccc;*/
     white-space: pre;
     word-wrap: normal;

@@ -387,12 +387,10 @@ window.addEventListener('load', function() {
         for (i = 0; i < anchors.length; i++) {
             var a = anchors[i];
             if (!a.href.includes("#") && a.href.includes("file://") && a.href.includes("Contents/Resources/")) {
-                a.href = a.href.replace(/file.*?Resources\//g, "ia-writer://open?path=/Locations/1Writer/")
+                a.href = a.href.replace(/file.*?Resources\//g, "ia-writer://open?path=/").replace("&","%26")
             }
-            
         }
     }
-
 
     // CHANGE FOOTNOTE HREF
     var changeFootnoteHref = function () {
@@ -485,14 +483,13 @@ window.addEventListener('load', function() {
         if (window.matchMedia("screen").matches) {
             bigfootCode()
         }
-        // setTimeout(function(){relabelFootnotes()}, 2000);
-        // splitFootnotesAndCitations()
-
+        setTimeout(function(){relabelFootnotes()}, 2000);
+        splitFootnotesAndCitations()
         mermaidCode()
         flowchartCode()
         highlightCode()
-        // convertLinksToIaLinks()
-        // additionalResources()
+        convertLinksToIaLinks()
+        additionalResources()
 
     }
 
