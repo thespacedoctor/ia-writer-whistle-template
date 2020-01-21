@@ -1,3 +1,5 @@
+
+
 window.addEventListener('load', function() {
 
     var splitFootnotesAndCitations = function() {
@@ -91,9 +93,10 @@ window.addEventListener('load', function() {
     // CONSOLIDATE FOOTNOTES
     var relabelFootnotes = function() {
         var footnoteMarkerlist = document.body.getElementsByClassName('footnote')
-        for (var i = 0, l = footnoteMarkerlist.length; i < l; i++) {
-            console.log(footnoteMarkerlist);
-            footnoteMarkerlist[i].innerHTML = i + 1
+        if (!$(footnoteMarkerlist).hasClass('brackets')){
+            for (var i = 0, l = footnoteMarkerlist.length; i < l; i++) {
+                footnoteMarkerlist[i].innerHTML = i + 1
+            }
         }
 
         footnoteButtons = document.body.getElementsByClassName('bigfoot-footnote__button')
@@ -111,7 +114,10 @@ window.addEventListener('load', function() {
 
     // MERMAID FLOWCHATS, GANTT AND SEQUENCE DIAGRAMS
     var mermaidCode = function() {
+        
+
         mermaid.init(undefined, $("code.mermaid"));
+        mermaid.init(undefined, $("div.highlight-mermaid div pre"));
        
     };
 
@@ -175,6 +181,11 @@ window.addEventListener('load', function() {
         for (i = 0; i < mermaids.length; i++) {
             mermaids[i].className = 'nohighlight mermaid';
         }
+        var mermaids = [];
+        [].push.apply(mermaids, document.getElementsByClassName('highlight-mermaid'));
+        for (i = 0; i < mermaids.length; i++) {
+            mermaids[i].className = 'nohighlight mermaid';
+        }
 
         hljs.initHighlightingOnLoad();
         var blocks = $('pre > code')
@@ -203,12 +214,12 @@ window.addEventListener('load', function() {
             anchorPattern: /(fn|footnote|note)\:?\d+(-\d+)?footnote/gi,
             numberResetSelector:"body"
         });
-        // SPHINX FOOTNOTES AND CITATIONS
+        // SPHINX FOOTNOTES + CITATION
         $.bigfoot({
             positionContent: true,
             preventPageScroll: false,
-            actionOriginalFN: "delete",
-            anchorPattern: /(fn|cn)\d+/gi,
+            actionOriginalFN: "ignore",
+            anchorPattern: /fn:+/gi,
             numberResetSelector:"body"
         });
     };
@@ -430,6 +441,7 @@ window.addEventListener('load', function() {
         for (var i = 0; i < footnotes.length; i++) {
             footnotes[i].href = "#"+footnotes[i].href.split("#")[1]+"footnote"
         }
+        // FOR DRAFTS
         footnotes = document.body.getElementsByClassName('footnotes')
         if (footnotes.length) {
             footnotes = footnotes[0].getElementsByTagName('ol')[0].getElementsByTagName('li')
@@ -476,8 +488,11 @@ window.addEventListener('load', function() {
             document.getElementById("devonthink_links").appendChild(dtElement)
         }
     }
+
+
     
     function handler(event) {
+
         processMath()
         changeFootnoteHref()
         if (window.matchMedia("screen").matches) {
@@ -495,8 +510,6 @@ window.addEventListener('load', function() {
 
     // WAIT FOR THE 'ia-writer-change' EVENT BEFORE ACTING
     // document.body.addEventListener('ia-writer-change', handler, false);
-
-
     if (document.body.hasAttribute('drafts')) {
         // DRAFTS
         $(document).ready(handler);
