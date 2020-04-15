@@ -14,7 +14,7 @@ html {
   font-family: "Vollkorn", Palatino, Times;
   font-weight: 300; /* SemiLight weight for non-Retina (@1x) */
   font-size: 1.15px; /* Overridden by responsive font sizing */
-  line-height: 170%; /* 2.5 = 30px @ font-size: 18px */
+  line-height: 130%; /* 2.5 = 30px @ font-size: 18px */
 }
 
 /* Normal weight for Retina… */
@@ -254,14 +254,14 @@ html {
 
 @media screen and (min-width: 768px) and (min-device-width: 1152px) {
   html {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
 /* For widescreen */
 @media screen and (min-width: 1080px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
