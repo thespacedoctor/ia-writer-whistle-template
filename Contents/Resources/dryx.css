@@ -9,3 +9,14 @@
     margin-bottom: 24px !important;
 }*/
 
+.rst-content h1, .rst-content h4, .rst-content h5 {
+    text-align: left;
+}
+
+
+.rst-content .toctree-wrapper p.caption {
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
