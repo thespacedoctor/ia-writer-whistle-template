@@ -64,7 +64,67 @@ div.wy-side-nav-search > a {
 
 }
 
-.wy-side-nav-search > div.version {
 
+
+/* RTD - BODY */
+body.wy-body-for-nav > div.wy-grid-for-nav > section > nav {
+    width: 100%;
+}
+
+/* RTD - BODY */
+body.wy-body-for-nav > div.wy-grid-for-nav > nav {
+    margin-left: 0px;
+}
+
+/* RTD - BODY */
+body.wy-body-for-nav {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+/* RTD - MAIN CONTENT ON NARROW SCREENS*/
+@media screen and (max-width: 768px){
+    .wy-nav-content {
+        max-width: 100%;
+    }
+}
+
+/* RTD - RESPONSIVE TOP NAVBAR ON NARROW SCREEN*/
+nav.wy-nav-top {
+    background: #333;
+}
+nav.wy-nav-top a {
+    color: white;
+}
+nav.wy-nav-top a:visited {
+    color: white !important;
+}
+nav.wy-nav-top i {
+    color: white !important;
+}
+
+/* RTD - VERSION NUMBER IN SIDEBAR */
+.wy-side-nav-search > div.version {
     margin-bottom: .3em;
 }
+
+/* RTD - HAMBURGER ON NARROW SCREENS */
+i.fa-bars {
+    color: #af1e1c;
+}
+
+/* RTD - SIDEBAR MENU*/
+body.wy-body-for-nav nav.wy-nav-side {
+    font-size: 1em;
+}
+
+
+/* RTD - SIDEBAR MENU INDEX*/
+@media screen and (max-width: 768px){
+    body.wy-body-for-nav div.wy-menu-vertical {
+        font-size: 1.1em;
+    }
+}
+
+
