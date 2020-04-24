@@ -127,4 +127,8 @@ body.wy-body-for-nav nav.wy-nav-side {
     }
 }
 
+ol, ul, .line-block {
+     line-height: 1.5 !important; 
+}
+
 
