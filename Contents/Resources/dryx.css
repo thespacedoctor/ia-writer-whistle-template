@@ -1,7 +1,7 @@
 .wy-nav-content {
     padding: 1.6em 1.236em;
     height: 100%;
-    max-width: 80%;
+    max-width: 1400px;
 }
 
 
@@ -83,6 +83,7 @@ body.wy-body-for-nav {
 }
 
 
+
 /* RTD - MAIN CONTENT ON NARROW SCREENS*/
 @media screen and (max-width: 768px){
     .wy-nav-content {
@@ -129,6 +130,10 @@ body.wy-body-for-nav nav.wy-nav-side {
 
 ol, ul, .line-block {
      line-height: 1.5 !important; 
+}
+
+body {
+    text-align: left;
 }
 
 
