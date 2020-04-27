@@ -136,4 +136,11 @@ body {
     text-align: left;
 }
 
+.search__result__title {
+    color: #af1e1c;
+    border-bottom: 1px solid #af1e1c;
+}
 
+.search__outer__input {
+    border-bottom: 1px solid #af1e1c;
+}
