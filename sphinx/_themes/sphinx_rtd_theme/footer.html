@@ -47,7 +47,7 @@
   {%- if show_sphinx %}
     {% set sphinx_web = '<a href="http://sphinx-doc.org/">Sphinx</a>' %}
     {% set readthedocs_web = '<a href="https://readthedocs.org">Read the Docs</a>'  %}
-      {% trans sphinx_web=sphinx_web, readthedocs_web=readthedocs_web %}Built with {{ sphinx_web }}.
+      {% trans sphinx_web=sphinx_web, readthedocs_web=readthedocs_web %}Built with {{ sphinx_web }}{% endtrans %}.
   {%- endif %}
 
   {%- block extrafooter %} {% endblock %}
