@@ -47,6 +47,10 @@
     margin-bottom: 0px!important;
 }
 
+.rst-content img {
+    max-width: 1024px;  !important;
+}
+
 
 
 #rtd-search-form {
