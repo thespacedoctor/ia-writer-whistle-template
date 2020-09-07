@@ -51,7 +51,7 @@
     {% for item in members %}
     {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
         {% if "test" not in item %}
-            ~{{ item }} (nice)
+            ~{{ item }}
        {% endif %}
     {% endif %}
     {%- endfor %}
