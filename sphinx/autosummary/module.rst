@@ -10,9 +10,13 @@
     :inherited-members:
     :member-order: groupwise
 
-    .. rubric:: I AM HERE
-    
+
     {% block classes %}
+
+    .. rubric:: Classes
+
+    {{ functions }}
+
     {% if classes %}
     .. rubric:: Classes
 
@@ -24,6 +28,11 @@
     {% endblock %}
 
     {% block functions %}
+
+    .. rubric:: functions
+
+    {{ functions }}
+
     {% if functions %}
     .. rubric:: Functions
 
@@ -43,6 +52,11 @@
       ~{{ item }}
     {%- endfor %}
     {% endif %}
+
+    .. rubric:: attributes
+
+    {{ attributes }}
+
     {% endblock %}
 
     {% block members %}
@@ -73,11 +87,18 @@
 
     {% for item in members %}
             ~{{ item }}
-
     {%- endfor %}
 
 
     {% endif %}
+
+    .. rubric:: MEMBERS
+
+    {{ members }}
+
+
+
+
 
     
     {% endblock %}
