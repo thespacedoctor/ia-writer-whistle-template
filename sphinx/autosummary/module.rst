@@ -51,6 +51,7 @@
     {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
         {% if "test" not in item %}
             {% if printMe.append(1) %}{% endif %}
+            {{ printMe }}
        {% endif %}
     {% endif %}
     {%- endfor %}
