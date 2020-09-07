@@ -69,6 +69,12 @@
     {% endif %}
     {%- endfor %}
 
+    {% for item in members %}
+            ~{{ item }}
+
+    {%- endfor %}
+
+
     {% endif %}
 
     
