@@ -8,7 +8,6 @@
     :undoc-members:
     :show-inheritance:
     :inherited-members:
-    :imported-members:
     :member-order: groupwise
 
 
@@ -23,11 +22,12 @@
     .. rubric:: Classes
 
     .. autosummary::
-    {% for item in classes %}
-      ~{{ item }}
-    {%- endfor %}
-    {% endif %}
-    {% endblock %}
+        :recursive:
+        {% for item in classes %}
+          ~{{ item }}
+        {%- endfor %}
+        {% endif %}
+        {% endblock %}
 
     {% block functions %}
 
@@ -39,21 +39,23 @@
     .. rubric:: Functions
 
     .. autosummary::
-    {% for item in functions %}
-      ~{{ item }}
-    {%- endfor %}
-    {% endif %}
-    {% endblock %}
+        :recursive:
+        {% for item in functions %}
+          ~{{ item }}
+        {%- endfor %}
+        {% endif %}
+        {% endblock %}
 
     {% block attributes %}
     {% if attributes %}
     .. rubric:: Properties
 
     .. autosummary::
-    {% for item in attributes %}
-      ~{{ item }}
-    {%- endfor %}
-    {% endif %}
+        :recursive:
+        {% for item in attributes %}
+          ~{{ item }}
+        {%- endfor %}
+        {% endif %}
 
     .. rubric:: attributes
 
@@ -80,13 +82,18 @@
 
     .. autosummary::
         :recursive:
-    {% for item in members %}
-    {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
-        {% if "test" not in item %}
-            ~{{ item }}
-       {% endif %}
-    {% endif %}
-    {%- endfor %}
+
+        {% for item in members %}
+        {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
+            {% if "test" not in item %}
+                ~{{ item }}
+           {% endif %}
+        {% endif %}
+        {%- endfor %}
+
+        {% for item in members %}
+                ~{{ item }}
+        {%- endfor %}
 
 
     {% endif %}
