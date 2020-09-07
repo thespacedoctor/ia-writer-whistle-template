@@ -8,6 +8,7 @@
     :undoc-members:
     :show-inheritance:
     :inherited-members:
+    :imported-members:
     :member-order: groupwise
 
 
@@ -85,10 +86,6 @@
             ~{{ item }}
        {% endif %}
     {% endif %}
-    {%- endfor %}
-
-    {% for item in members %}
-            ~{{ item }}
     {%- endfor %}
 
 
