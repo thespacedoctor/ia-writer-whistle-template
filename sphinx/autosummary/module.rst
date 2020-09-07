@@ -10,7 +10,7 @@
     :inherited-members:
     :member-order: groupwise
 
-    I AM HERE
+    .. rubric:: I AM HERE
     
     {% block classes %}
     {% if classes %}
