@@ -13,16 +13,11 @@
 
     {% block classes %}
 
-    .. rubric:: Classes
-
-
-    {{ functions }}
-
     {% if classes %}
     .. rubric:: Classes
 
     .. autosummary::
-        :recursive:
+
         {% for item in classes %}
           ~{{ item }}
         {%- endfor %}
@@ -31,15 +26,12 @@
 
     {% block functions %}
 
-    .. rubric:: functions
-
-    {{ functions }}
 
     {% if functions %}
     .. rubric:: Functions
 
     .. autosummary::
-        :recursive:
+
         {% for item in functions %}
           ~{{ item }}
         {%- endfor %}
@@ -51,15 +43,11 @@
     .. rubric:: Properties
 
     .. autosummary::
-        :recursive:
+
         {% for item in attributes %}
           ~{{ item }}
         {%- endfor %}
         {% endif %}
-
-    .. rubric:: attributes
-
-    {{ attributes }}
 
     {% endblock %}
 
@@ -81,7 +69,6 @@
     .. rubric:: Sub-modules
 
     .. autosummary::
-        :recursive:
 
         {% for item in members %}
         {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
@@ -91,23 +78,9 @@
         {% endif %}
         {%- endfor %}
 
-        {% for item in members %}
-                ~{{ item }}
-        {%- endfor %}
-
 
     {% endif %}
     
     {% endblock %}
 
-    {% block modules %}
-    {% if modules %}
-    .. rubric:: Modules
 
-    .. autosummary::
-       :recursive:
-    {% for item in modules %}
-       {{ item }}
-    {%- endfor %}
-    {% endif %}
-    {% endblock %}
