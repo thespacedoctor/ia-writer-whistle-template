@@ -45,6 +45,18 @@
 
     {% block members %}
     {% if members %}
+    {% set printMe = [] %}
+    
+    {% for item in members %}
+    {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
+        {% if "test" not in item %}
+            {% if printMe.append(1) %}{% endif %}
+       {% endif %}
+    {% endif %}
+    {%- endfor %}
+    {% endif %}
+
+    {% if printMe|length > 0 %}
     .. rubric:: Sub-modules
 
     .. autosummary::
@@ -55,6 +67,8 @@
        {% endif %}
     {% endif %}
     {%- endfor %}
+
     {% endif %}
+
     
     {% endblock %}
