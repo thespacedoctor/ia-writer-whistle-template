@@ -15,6 +15,7 @@
 
     .. rubric:: Classes
 
+
     {{ functions }}
 
     {% if classes %}
@@ -77,6 +78,7 @@
     .. rubric:: Sub-modules
 
     .. autosummary::
+        :recursive:
     {% for item in members %}
     {% if "__" not in item and "_" not in item|first and "absolute_import" not in item  %}
         {% if "test" not in item %}
@@ -91,14 +93,17 @@
 
 
     {% endif %}
-
-    .. rubric:: MEMBERS
-
-    {{ members }}
-
-
-
-
-
     
+    {% endblock %}
+
+    {% block modules %}
+    {% if modules %}
+    .. rubric:: Modules
+
+    .. autosummary::
+       :recursive:
+    {% for item in modules %}
+       {{ item }}
+    {%- endfor %}
+    {% endif %}
     {% endblock %}
