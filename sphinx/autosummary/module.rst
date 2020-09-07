@@ -10,6 +10,8 @@
     :inherited-members:
     :member-order: groupwise
 
+.. currentmodule:: {{ fullname }}
+
 
     {% block classes %}
 
