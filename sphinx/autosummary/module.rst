@@ -22,7 +22,7 @@
 
     {% block classes %}
 
-    {% if classes or members %}
+    {% if classes %}
     .. rubric:: Classes
 
     .. autosummary::
