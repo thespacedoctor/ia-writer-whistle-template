@@ -61,7 +61,7 @@
 }
 
 div.wy-side-nav-search > p {
-    color: #333;
+    color: #fcfcfc;
     margin-bottom: 1em;
     font-style: italic;
 }
@@ -100,7 +100,7 @@ body.wy-body-for-nav {
 
 /* RTD - RESPONSIVE TOP NAVBAR ON NARROW SCREEN*/
 nav.wy-nav-top {
-    background: #333;
+    background: #002b36;
 }
 nav.wy-nav-top a {
     color: white;
@@ -151,3 +151,17 @@ body {
 .search__outer__input {
     border-bottom: 1px solid #af1e1c;
 }
+
+.wy-side-scroll {
+    color: white;
+}
+
+.wy-nav-side {
+  background-color: #002b36 !important;
+  margin-left: 50px;
+}
+
+.wy-side-nav-search {
+background-color: #002b36 !important;
+}
+

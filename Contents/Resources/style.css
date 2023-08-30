@@ -270,7 +270,7 @@ body {
   max-width: 38em;
   text-align: justify;
   text-justify: inter-word;
-  color: #333;
+  color: #002b36;
 }
 body.wy-body-for-nav {
   margin: 0;
@@ -292,7 +292,7 @@ h6,
 figure,
 p {
     font-size: inherit;
-    line-height: inherit;
+    line-height: 1.7;
     margin: 0;
     /* 0.5em to act as space after floated h3 */
     padding: 0 0.5em 0 0;
@@ -458,7 +458,7 @@ border: 1px solid #ccc;
 code,
 samp,
 kbd {
-  font-size: calc((15 / 18) * 1em); /* 0.8333 = 15px @ font-size: 18px */
+  font-size: calc((15 / 18) * 1em); /* 0.8002b36 = 15px @ font-size: 18px */
 }
 
 pre {
@@ -505,7 +505,7 @@ code.literal {
     font-family: "Consolas", "Menlo", "Monaco", monospace, serif !important;
     white-space: pre !important;
     word-wrap: normal !important;
-    color: #333 !important;
+    color: #002b36 !important;
     font-weight: bold !important;
 }
 
@@ -514,20 +514,20 @@ code.literal {
 /* ANCHORS */
 
 a {
-    color: #af1e1c;
+    color: #dc322f;
     text-decoration: none;
     }
 a:hover {
     text-decoration: underline;
     }
 a:visited {
-    color: #af1e1c !important;
+    color: #dc322f !important;
 }
 a img {
     border:none;
     }
 h1 a, h1 a:hover {
-    color: #333;
+    color: #002b36;
     text-decoration: none;
     }
 
@@ -536,14 +536,14 @@ h1 {
 }
 
 .wy-menu-vertical a, .wy-side-nav-search a {
-  color: #af1e1c !important;
+  color: #dc322f !important;
   text-decoration: none;
 }
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
-  color:  #333 !important;
+  color:  #002b36 !important;
 }
 .wy-side-nav-search >div.version {
-  color: #333 !important;
+  color: #002b36 !important;
 }
 .wy-side-nav-search {
   background-color: #FCFCFB !important;
