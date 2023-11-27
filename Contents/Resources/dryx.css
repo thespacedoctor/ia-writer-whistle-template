@@ -61,7 +61,7 @@
 }
 
 div.wy-side-nav-search > p {
-    color: #fcfcfc;
+    color: #e3e3e3 ;
     margin-bottom: 1em;
     font-style: italic;
 }
@@ -157,11 +157,32 @@ body {
 }
 
 .wy-nav-side {
-  background-color: #002b36 !important;
+  background-color: #282828 !important;
   margin-left: 50px;
 }
 
 .wy-side-nav-search {
-background-color: #002b36 !important;
+background-color: #282828 !important;
 }
 
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+  color:  white !important;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+  color:  #e3e3e3 !important;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #e3e3e3 !important;
+}
+.wy-menu-vertical li.current>a {
+    color: #404040;
+    padding: .4045em 1.618em;
+    font-weight: normal;
+    position: relative;
+    background: #fcfcfc;
+    border: none;
+    padding-left: 1.618em -4px;
+    border: 0px;
+}
