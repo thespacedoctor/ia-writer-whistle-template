@@ -165,6 +165,7 @@ body {
 background-color: #282828 !important;
 }
 
+<<<<<<< Updated upstream
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
   color:  white !important;
 }
@@ -186,3 +187,9 @@ background-color: #282828 !important;
     padding-left: 1.618em -4px;
     border: 0px;
 }
+=======
+caption {
+    border-bottom: 0px;
+}
+
+>>>>>>> Stashed changes
